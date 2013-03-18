@@ -225,7 +225,7 @@ and your footer gets pushed down a bit more, creating vertical scroll bars in th
   height: 60px;
   overflow: hidden;
   line-height: 60px;
-  background: #e0e7eb;
+  /* background: #e0e7eb; */
   /* border-top: 1px solid #c3ccd0; */
   clear:both;
   }
@@ -246,7 +246,7 @@ and your footer gets pushed down a bit more, creating vertical scroll bars in th
 
 #footer a {
   margin-right: 20px;
-  padding-left: 20px;
+  /* padding-left: 20px; */
 }
 /*
   a.about, a.help { background-image: url('images/sprite.png'); }
@@ -497,7 +497,7 @@ body.start {
   /* box-shadow: 0 1px 0 rgba(255, 255, 255, 0),0 0 10px rgba(0, 0, 0, 0.1); */
 
   /* background:url('images/sprite.png') -450px -640px no-repeat; */
-  background-color: #E0E7EB;
+  /* background-color: #E0E7EB; */
   
   /* -moz-border-radius: 3px 3px 0px 3px;
   -webkit-border-radius: 3px 3px 0px 3px;
@@ -506,39 +506,30 @@ body.start {
 
 .repos > a:before {
   content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -0.25em;
+  display: table;
+  width: 400px;
   }
 
-.repos > a:hover {
-  background-color: #f0f5f7;
+
+.repos > a:hover .name {
+  border-bottom: 2px solid black;
   }
 
-/*
 .repos > a .name {
-  display: inline-block;
-  vertical-align: middle;
-  width: 116px;
-  font-size: 12px;
-  text-align: center;
-  overflow: hidden;
-  word-wrap: break-word;
-  color: #526066;
-  margin: 0 10px;
-  }
-*/
+  display: inline-block;;
+  border-bottom: 2px solid transparent;
+}
+
 .repos > a:hover .name {
   color: #526066;
   }
 
 /* Post listing search bar */
-
+/*
 .search-menu-wrapper {
   background: #e0e7eb;
   border-bottom: 1px solid #c3ccd0;
-}
+}*/
 
 .search-menu {
   width: 960px;
@@ -609,6 +600,8 @@ body.start {
 .search-menu .search {
   height: 60px;
   float: left;
+  padding: 0;
+  border-bottom: 1px solid black;
 }
 
 .loading-branches, .post-listing a.link.folder.loading .filename  {
@@ -793,7 +786,7 @@ ul.site li a {
 
 #posts .inner {
   padding: 30px 0;
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
   }
 
